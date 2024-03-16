@@ -1,5 +1,6 @@
 import Card from "./Card";
 import useStore from "../manager/store";
+import emptyList from "../assets/empty-list.png";
 
 const CardList = () => {
   const { dataset } = useStore((state) => ({
@@ -23,11 +24,8 @@ const CardList = () => {
           })}
         </div>
       ) : (
-        <div className="py-10 flex justify-center items-center gap-4 duration-200 ease-in-out">
-          <h1 className="text-center uppercase text-2xl">
-            List is currently Empty !!
-          </h1>
-          <ion-icon name="layers-outline" style={{color: "black"}}></ion-icon>
+        <div className="pt-10 flex justify-center items-center gap-4 duration-200 ease-in-out">
+          <img src={emptyList} alt="empty-list" style={{ height: "30vh", width: '100wv'}} />
         </div>
       )}
     </div>
